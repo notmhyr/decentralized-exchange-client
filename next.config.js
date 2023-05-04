@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  images: {
+    domains: ["cdn.moralis.io"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

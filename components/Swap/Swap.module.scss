@@ -1,0 +1,219 @@
+.swap {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+  padding: 0.8rem;
+
+  &_left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    h1 {
+      font-size: 3rem;
+      line-height: 1;
+      padding: 0.5rem 0;
+      background-color: #fff;
+      margin: 0;
+      font-weight: 500;
+      background-image: radial-gradient(
+          at 4% 36%,
+          hsla(0, 0%, 100%, 1) 0,
+          transparent 53%
+        ),
+        radial-gradient(at 100% 60%, rgb(0, 0, 0) 0, transparent 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      text-align: left;
+      width: 75%;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    .swap_left_services {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 2.2rem;
+      width: 100%;
+      &_item {
+        min-height: 70px;
+        min-width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.5px solid lightgray;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.25rem;
+      }
+    }
+  }
+
+  .swap_right {
+    // position: relative;
+    border-radius: 20px;
+    background: rgb(39, 51, 89, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    max-width: 510px;
+
+    &_header {
+      display: flex;
+      justify-content: space-between;
+
+      .swap_right_header_icon {
+        cursor: pointer;
+      }
+    }
+
+    &_box {
+      width: 100%;
+      border-radius: 30px;
+      padding: 1rem;
+      border: 1px solid lightgray;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        background-color: transparent;
+        width: 75%;
+        height: 100%;
+        padding: 1rem 0.5rem;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 1.5rem;
+        &::placeholder {
+          color: white;
+          font-size: 1.8rem;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          display: none;
+        }
+      }
+      .swap_right_box_asset {
+        width: 25%;
+        max-width: 90px;
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        padding: 0.4rem;
+        background-color: rgb(0, 0, 0, 0.3);
+        border-radius: 15px;
+        cursor: pointer;
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .swap_right_switchToken {
+      padding: 0.8rem;
+      border-radius: 25px;
+      display: grid;
+      background-color: #262631;
+      // border: 1px solid rgb(0, 0, 0, 0.3);
+      // color: black;
+      align-self: center;
+      margin-top: -1.5rem;
+      margin-bottom: -1.5rem;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .swap_right_btn {
+      background-color: transparent;
+      padding: 0.7rem 1.5rem;
+      color: white;
+      border: 2px solid #3d4f7c;
+      border-radius: 15px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 0.8rem;
+
+      .swap_right_btn_pending {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .swap {
+    .swap_right {
+      padding: 0.7rem;
+
+      &_box {
+        input {
+          font-size: 1rem;
+          &::placeholder {
+            color: white;
+            font-size: 1rem;
+          }
+        }
+        .swap_right_box_asset {
+          width: 30%;
+
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .swap {
+    h1 {
+      font-size: 1.9rem;
+      line-height: 2.5rem;
+    }
+
+    P {
+      width: 90%;
+    }
+
+    .swap_left_services {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      div:nth-child(3) {
+        border-top-right-radius: 0 !important;
+      }
+
+      div:nth-child(4) {
+        border-bottom-left-radius: 0 !important;
+      }
+
+      &_item {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .swap {
+    flex-direction: column;
+  }
+}

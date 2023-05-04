@@ -1,0 +1,69 @@
+.sidebar {
+  position: relative;
+  background: rgb(39, 51, 89, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 70vw;
+  height: 100vh;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: -0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.35rem;
+  padding-top: 4rem;
+
+  animation: slide-in 0.5s ease-out;
+
+  .sidebar_closeBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 19px;
+    right: 26px;
+  }
+
+  span {
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.4rem;
+  }
+
+  button {
+    border: none;
+    background-color: #2952e3;
+    padding: 0.6rem 1.6rem;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    &:hover {
+      background-color: #2546bd;
+    }
+  }
+
+  .btn_connecting {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
